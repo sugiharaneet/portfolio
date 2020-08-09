@@ -10,7 +10,7 @@
       :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
     ></div>
     <nuxt-link :to=" '/work/' + work.fields.slug ">
-      <h3 class="ml-3 font-bold">{{ work.fields.title }}</h3>
+      <h3 class="ml-3 font-bold" id="work_title">{{ work.fields.title }}</h3>
     </nuxt-link>
     <h4 class="ml-3 my-2 text-xs">{{ work.fields.subtitle }}</h4>
     <div class="flex ml-2">
@@ -31,3 +31,9 @@ export default {
   props: ['work']
 }
 </script>
+
+<style>
+#work_title {
+  color: blue;
+}
+</style>
